@@ -4,7 +4,8 @@
   "description": "A full stack mern app where a user can choose to chat to another user by following or not chat by not following or  unfollowing that particular person.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "author": "Tshenolo Seduma",
   "license": "ISC",

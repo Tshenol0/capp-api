@@ -31,7 +31,9 @@ mongoose.connect(process.env.PASSWORD);
 
 const port = process.env.PORT || 5000;
 
-const server = app.listen(port);
+const server = app.listen(port, () => {
+  console.log("connected");
+});
 
 const io = require("socket.io")(server, {
   cors: { origin: "http://127.0.0.1:5173" },
