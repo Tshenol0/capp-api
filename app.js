@@ -36,7 +36,7 @@ const server = app.listen(port, () => {
 });
 
 const io = require("socket.io")(server, {
-  cors: { origin: "http://127.0.0.1:5173" },
+  cors: { origin: "https://capp-l9ts.onrender.com" },
 });
 
 io.on("connection", (socket) => {
