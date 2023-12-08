@@ -26,6 +26,9 @@ app.use("/api/logout", logout);
 app.use("/api/chats", chat);
 
 app.use("/api/messages", message);
+app.get("/", (req, res) => {
+  res.status(200).send("connected");
+});
 
 mongoose.connect(process.env.PASSWORD);
 
