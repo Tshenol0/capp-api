@@ -9,7 +9,7 @@ const mid = require("../middleware/verifyFirst");
 
 const chat = express.Router();
 chat.post("/", mid, createChat);
-chat.get("/:id", mid, getChats);
+chat.get("/:userid", mid, getChats);
 chat.delete("/:id", mid, removeChat);
 chat.put("/:chatid", mid, updateRecent);
 
