@@ -33,7 +33,7 @@ userSchema.statics.createUser = async function (
   password
 ) {
   if (firstname === "" || lastname === "" || email === "" || password === "") {
-    throw new Error("All input/s is required");
+    throw new Error("All input is required");
   }
   if (!validator.isEmail(email)) {
     throw new Error("Email is not valid");
@@ -57,7 +57,7 @@ userSchema.statics.createUser = async function (
 
 userSchema.statics.accessUser = async function (email, password) {
   if (email === "" || password === "") {
-    throw new Error("All input/s required");
+    throw new Error("All input required");
   }
   const user = await this.findOne({ email });
 
@@ -68,7 +68,7 @@ userSchema.statics.accessUser = async function (email, password) {
   const check = await bcrypt.compare(password, user.password);
 
   if (!check) {
-    throw new Error("Passord incorrect");
+    throw new Error("Password incorrect");
   }
 
   return user;
