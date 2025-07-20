@@ -27,10 +27,10 @@ app.use("/api/chats", chat);
 
 app.use("/api/messages", message);
 app.get("/", (req, res) => {
-  res.status(200).send("connected");
+  res.status(200).send("yeah");
 });
 
-mongoose.connect(process.env.PASSWORD);
+mongoose.connect(process.env.DATABASE_URL);
 
 const port = process.env.PORT || 5000;
 
