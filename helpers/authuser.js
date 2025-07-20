@@ -23,7 +23,7 @@ const register = async (req, res) => {
 
     res.status(201).json({ email, accesstoken });
   } catch (error) {
-    res.status(500).json("Account already exists");
+    res.status(500).json("Account already exists");error.message
   }
 };
 
